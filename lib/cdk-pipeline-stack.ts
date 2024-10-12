@@ -17,12 +17,12 @@ export class CdkPipelineStack extends cdk.Stack {
      * Then you also need to add that as plaintext inside of AWS SecretsManager.
      * Make sure to make the strings match.
      */
-    const githubAccessToken = cdk.SecretValue.secretsManager("github-token-1");
+    const githubAccessToken = cdk.SecretValue.secretsManager("github-token");
     const cdkDefaultAccount = cdk.SecretValue.secretsManager(
       "cdk-default-account"
     ).unsafeUnwrap();
     const cdkDefaultRegion = "us-east-1";
-    const githubRepo = "Alexander-Infante/cdk-bedrock-app";
+    const githubRepo = "johnwongfc/cdk-bedrock-app";
 
     /**
      * This CodePipeline does a few steps in the code below
